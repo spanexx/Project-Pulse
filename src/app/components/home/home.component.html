@@ -1,0 +1,64 @@
+<div class="banner">
+  <h1 class="banner-text"> Project Pulse</h1>
+  <small class="quote">List it, Live it: Your Tasks, Simplified</small>
+</div>
+    
+    <div class="container">
+
+    <div class="add-task" (click)="Open('task')">
+      <img src="../../../assets/journalIco.png" alt="add-task">
+      <div>Add Task</div>
+    </div>
+
+    <div class="reminder" (click)="Open('reminder')">
+      <img src="../../../assets/clockIco.png" alt="reminder">
+      <div>Reminder</div>
+    </div>
+
+    <div class="task-list">
+      <img src="../../../assets/TaskfulIco.png" alt="reminder" routerLink="/task-list">
+      <div>Task List</div>
+    </div>
+
+    <div class="notes">
+      <img src="../../../assets/pencilico.png" alt="reminder" routerLink="/notes/notes-container">
+      <div>Create Notes</div>
+    </div>
+
+    <div class="stats">
+      <img src="../../../assets/statsIco.png" alt="reminder" routerLink="/stats">
+      <div>Stats</div>
+    </div>
+
+    <div class="ideas">
+      <img src="../../../assets/bulbIco.png" alt="reminder" routerLink="/idea-manager">
+      <div>Idea Management</div>
+    </div>
+
+    <div class="archives">
+      <img src="../../../assets/folderIco.png" alt="reminder" routerLink="/archives">
+      <div>Archives</div>
+    </div>
+
+    <div class="hotspots">
+      <img src="../../../assets/hotspotico.png" alt="reminder" routerLink="/hotspots">
+      <div>Hotspots</div>
+    </div>
+
+    <div class="trends">
+      <img src="../../../assets/trendingIco.png" alt="reminder" routerLink="/trends">
+      <div>Trends</div>
+    </div>
+
+    <div class="settings">
+      <img src="../../../assets/settingsIco.png" alt="reminder" routerLink="/settings">
+      <div>Settings</div>
+    </div>
+
+
+  </div>
+
+  <app-reminder *ngIf="remindings && isLogged" [modal]="remindings" (closeModalEvent)="remindings"></app-reminder>
+
+    <add-task *ngIf="addingTask  && isLogged" [modal]="addingTask" (closeModalEvent)="addingTask = false"></add-task>
+  

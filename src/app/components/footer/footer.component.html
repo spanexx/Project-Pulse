@@ -1,0 +1,68 @@
+
+
+<footer class="site-footer">
+    <header>
+        <header class="app-header">
+            <div class="logo-container">
+              <img src="{{ logoUrl }}" alt="todoHub" class="logo-image" routerLink="/">
+              <div class="logo-text"> 
+                <small class="todoHub" routerLink="/" >ProjectPulse</small>
+              </div>
+             
+            </div>
+            <nav class="navigation">
+                <a *ngIf="!loggedIn" routerLink="/log-in">Login</a>
+                <a  *ngIf="loggedIn" (click)="logOut()">Logout</a>
+                <a  *ngIf="loggedIn" routerLink="/profile">
+                  <img class="profile-icon" src="{{profileIcon}}" alt="profileIco">
+                </a>
+                
+              
+            </nav>
+          </header>
+          
+    </header>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="/"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="/"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="/stats"><i class="fas fa-chart-line"></i> Stats</a></li>
+                    <li><a href="/trends"><i class="fas fa-fire"></i> Trending Now</a></li>
+                    <li><a href="/hotspots"><i class="fas fa-map-marker-alt"></i> Hotspots</a></li>
+                </ul>
+            </div>
+            <div class="footer-projects">
+                <h3><i class="fas fa-tasks"></i> Projects</h3>
+                <ul>
+                    <li><a href="/project-manager"><i class="fas fa-project-diagram"></i> Project Management</a></li>
+                    <li><a href="/notes/notes-container"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                    <li><a href="/archives"><i class="fas fa-archive"></i> Archives</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="socials">
+                <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.tiktok.com" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            </div>
+            
+        </div>
+        <div class="newsletter-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Project Pulse, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

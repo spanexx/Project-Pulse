@@ -1,0 +1,30 @@
+<div class="signup-container">
+    <div class="signup-form">
+      <h2>Sign Up</h2>
+
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+          @if(signupForm.controls['email'].invalid){
+            <small class="error" style="color: red;">{{errorMessage}}</small>
+          }
+        </div>
+  
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" formControlName="password">
+        </div>
+  
+        <div class="input-group">
+          <label for="displayName">Display Name:</label>
+          <input type="text" id="displayName" formControlName="displayName">
+        </div>
+  
+        <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+      </form>
+  
+      <p>Already have an account? <a routerLink="/log-in">Login</a></p>
+      <p class="error" style="color: red;">{{ errorMessage}}</p>
+    </div>
+  </div>

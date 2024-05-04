@@ -1,0 +1,112 @@
+/* reminder.component.css */
+.reminder-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .modal-content {
+    position: relative;
+    max-height: 80vh;
+  overflow-y: auto;
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 100px; /* Adjust height for textarea */
+  }
+  
+  select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+  }
+  
+  input[type="file"] {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .notification-preferences {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-preferences input[type="checkbox"] {
+    margin-bottom: 5px;
+  }
+  
+  .notification-preferences label {
+    margin-left: 5px;
+  }
+  
+  /* Responsive design */
+  
+  @media (max-width: 768px) {
+    .modal-container {
+      max-width: 90%; /* Adjust container width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }

@@ -1,0 +1,90 @@
+/* app-header.component.css */
+.app-header {
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px; 
+  height: 70px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.logo-image {
+  height: 50px; 
+  width: auto; 
+}
+
+
+
+.logo-text {
+  font-size: 1.2rem; 
+  color: #333; 
+  font-weight: 700; 
+  margin-left: 8px; 
+  line-height: 40px; 
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 40px; 
+}
+
+.navigation a {
+  display: inline-block;
+  margin-left: 8px; 
+  padding: 10px 15px; 
+  text-decoration: none; 
+  color: #333; 
+  font-weight: 500; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+}
+
+.navigation a:hover,
+.navigation a:focus { 
+  background-color: #f2f2f2; 
+  outline: none; 
+}
+
+
+
+.profile-icon {
+  height: 20px;
+  width: auto;
+}
+
+
+
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    height: auto; 
+    padding: 20px; 
+  }
+
+  .logo-container {
+    justify-content: center; 
+    margin-bottom: 20px; 
+    margin-left: 0;
+  }
+
+  .navigation {
+    justify-content: center; 
+    margin-right: 0;
+  }
+
+  .navigation a {
+    margin: 0 4px; /* Reduced spacing between links */
+    padding: 8px 12px; /* Smaller padding for mobile view */
+  }
+}

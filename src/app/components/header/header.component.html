@@ -1,0 +1,21 @@
+<header class="app-header">
+    <div class="logo-container">
+      <img src="{{ logoUrl }}" alt="todoHub" class="logo-image" routerLink="/">
+      <div class="logo-text"> 
+        <small class="todoHub" routerLink="/" >ProjectPulse</small>
+      </div>
+     
+    </div>
+    <nav class="navigation">
+        <a *ngIf="!loggedIn" routerLink="/log-in">Login</a>
+    
+        <a  *ngIf="loggedIn" (click)="logOut()">Logout</a>
+        <a  *ngIf="loggedIn" routerLink="/project-manager">Project Management</a>
+        <a  *ngIf="loggedIn" routerLink="/profile">
+          <img class="profile-icon" src="{{profileIcon}}" alt="profileIco">
+        </a>
+        
+      
+    </nav>
+  </header>
+  

@@ -1,0 +1,20 @@
+    <form [formGroup]="noteForm" (ngSubmit)="createNote()" class="note-form">
+        <div class="input-group">
+            <input type="text" id="title" formControlName="title" placeholder="Title">
+        </div>
+        <div class="input-group">
+            <textarea id="content" formControlName="content" placeholder="Start typing..." rows="10"></textarea>
+        </div>
+
+        <button type="submit">Save Note</button>
+    </form>
+
+
+
+    <div *ngFor="let note of notes">
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+        <small>{{ note.createdAt }}</small>
+        <hr>
+      </div>
+      

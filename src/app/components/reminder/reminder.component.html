@@ -1,0 +1,68 @@
+<!-- reminder.component.html -->
+<div class="reminder-modal" *ngIf="modal">
+    <div class="modal-overlay" (click)="closeModal()"></div>
+    <div class="modal-container">
+      <div class="modal-content">
+        <h2>Create Reminder</h2>
+        <form [formGroup]="reminderForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" formControlName="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" formControlName="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" formControlName="phone">
+          </div>
+          <div class="form-group">
+            <label for="dateTime">Date and Time:</label>
+            <input type="datetime-local" id="dateTime" formControlName="dateTime" required>
+          </div>
+          <!-- Include other form fields below -->
+          <div class="form-group">
+            <label for="repeat">Repeat:</label>
+            <select id="repeat" formControlName="repeat">
+              <option *ngFor="let option of repeatOptions" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority:</label>
+            <select id="priority" formControlName="priority">
+              <option *ngFor="let option of priorityOptions" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+          <div class="form-group notification-preferences">
+            <label>Notification Preferences:</label>
+            <div *ngFor="let option of notificationOptions">
+              <input type="checkbox" [id]="option" [formControlName]="option" [value]="option">
+              <label [for]="option">{{ option }}</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" formControlName="location">
+          </div>
+          <div class="form-group">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" formControlName="notes"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="attachments">Attachments:</label>
+            <input type="file" id="attachments" formControlName="attachments" multiple>
+          </div>
+          <!-- End of other form fields -->
+          <button type="submit">Save Reminder</button>
+        </form>
+        <i class="fas fa-times close-icon" (click)="closeModal()" style="color: red;"></i>
+      </div>
+    </div>
+  </div>
+  

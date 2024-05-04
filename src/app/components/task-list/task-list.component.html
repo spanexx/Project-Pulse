@@ -1,0 +1,33 @@
+
+<div class="filters">
+
+<filter (filterChange)="filterByStatus($event)"></filter>
+
+<input type="text" 
+[(ngModel)]="searchTerm" placeholder="Search tasks..." 
+(input)="applySearchFilter()">
+
+</div>
+
+<div *ngFor="let task of filteredTasks" class="task-item" >
+    <div [ngClass]="getTaskStatusClass(task)">
+        <h3 class="task-name">{{ task.name }}</h3>
+
+        <div class="task-details">
+            <p class="task-description">{{ task.description }}</p>
+            <p class="task-status">{{ task.status }}</p>
+            <small class="task-created-at">{{ task.created_at }}</small>
+        </div>
+
+        <button class="edit-button" (click)="editTask(task.id!, task)">Edit</button>
+        <button class="delete-button" (click)="deleteTask(task.id!)">Delete</button>
+    </div>
+</div>
+
+
+<task-update-form *ngIf="selectedTask && showModal" 
+[selectedTaskID]="selectedTaskId!" 
+[selectedTAsk]="selectedTask"
+[showModal]="showModal" 
+(closeModalEvent)="closeModal()"
+></task-update-form>

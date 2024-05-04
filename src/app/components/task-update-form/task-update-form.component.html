@@ -1,0 +1,30 @@
+<div class="task-modal-overlay"></div> 
+<div class="container">
+
+    <div class="task-modal"> 
+      <div class="task-modal-content">
+        <h2>Update Task</h2>
+        <form [formGroup]="addTaskForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <label for="name">Task Name:</label>
+            <input type="text" class="form-input" id="name" formControlName="name">
+          </div>    
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-textarea" id="description" formControlName="description"></textarea>
+          </div>   
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <select class="form-select" id="status" formControlName="status">
+              <option value="pending">Pending</option>
+              <option value="started">Started</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!addTaskForm.valid">Update Task</button> 
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button> 
+        </form>    
+      </div> 
+    </div>
+  </div>

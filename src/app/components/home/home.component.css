@@ -1,0 +1,97 @@
+.banner {
+  text-align: center;
+  background: linear-gradient(135deg, #007bff, #00ccff, #007bff);
+  color: #2c2a2a;
+  padding: 3vw; 
+  transition: background-color 0.3s ease; 
+
+}
+
+.banner-text {
+  margin: 0;
+  font-size: 4vw; 
+  font-weight: 700;
+  transition: font-size 0.3s ease; 
+}
+
+.quote {
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1vw auto; 
+  background-image: linear-gradient(to bottom, #f2f7fc, #e2ebf3);
+  padding: 1vw; 
+}
+
+.add-task, .reminder, .task-list, 
+.notes, .stats, .ideas, .archives, 
+.hotspots, .trends, .settings {
+  width: 18vw;
+  text-align: center;
+  cursor: pointer;
+  padding: 5vw 0; 
+
+}
+
+.add-task:hover, .reminder:hover, .task-list:hover, 
+.notes:hover, .stats:hover, .ideas:hover, .archives:hover, 
+.hotspots:hover, .trends:hover, .settings:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.add-task div, .reminder div, .task-list div, 
+.notes div, .stats div, .ideas div, .archives div, 
+.hotspots div, .trends div, .settings div {
+  transition: color 0.3s ease;
+}
+
+.add-task:hover div, .reminder:hover div, .task-list:hover div, 
+.notes:hover div, .stats:hover div, .ideas:hover div, .archives:hover div, 
+.hotspots:hover div, .trends:hover div, .settings:hover div {
+  color: #007bff;   
+}
+
+.reminder, .notes, .archives, .trends{
+  margin-top: 50px;
+}
+
+
+.task-list, .hotspot{
+  margin-top: 80px;
+}
+
+
+
+.add-task img, .reminder img, 
+.task-list img, .notes img, 
+.stats img, .ideas img, 
+.archives img, .hotspots img, 
+.trends img, .settings img {
+  width: 80%; 
+  max-width: 12vw; 
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-text {
+    font-size: 6vw; 
+  }
+
+  .add-task, .reminder, .task-list, 
+  .notes, .stats, .ideas, .archives, 
+  .hotspots, .trends, .settings {
+    width: 50%; 
+    margin-bottom: 8vw; 
+  }
+}
