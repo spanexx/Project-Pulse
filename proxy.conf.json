@@ -1,0 +1,14 @@
+{
+    "/trends": {
+      "target": "https://api.builtwith.com",
+      "secure": false,
+      "changeOrigin": true
+    },
+    
+    "/api": {
+      "target": "https://api.twitter.com/1.1",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  

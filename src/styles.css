@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Just+Me+Again+Down+Here&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family:  'Nunito Sans';
-
 }
 
 
@@ -21,7 +21,6 @@ body{
     font-family: "Just Me Again Down Here", 'Nunito Sans';
     font-size: 24px;
     cursor: pointer;
-
 }
 
 a{

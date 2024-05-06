@@ -5,11 +5,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FooterComponent } from './components/footer/footer.component';
+import { TrendsComponent } from './components/trends/trends.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, AngularFireModule, FooterComponent],
+  imports: [
+    RouterOutlet, HeaderComponent, TrendsComponent,
+    AngularFireModule, FooterComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

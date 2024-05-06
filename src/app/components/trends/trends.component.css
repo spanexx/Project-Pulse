@@ -1,0 +1,103 @@
+/* Container for articles */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute articles evenly */
+  }
+  
+  /* Individual article */
+  .article {
+    flex: 1 1 300px;
+    max-width: 400px; /* Limit article width */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  /* Article title */
+  .article h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333333;
+  }
+  
+  /* Article image */
+  .article img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Article description */
+  .article p {
+    margin-bottom: 10px;
+    color: #666666;
+  }
+  
+  /* Article read more link */
+  .article .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .article .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* Guardian news container */
+  .guardian-container {
+    margin-top: 40px ;
+    padding: 10px;
+    overflow: hidden;
+
+  }
+  
+  /* Guardian news heading */
+  .guardian-heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333333;
+  }
+  
+  /* Guardian news item */
+  .guardian-news-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Guardian news item title */
+  .guardian-news-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333333;
+  }
+  
+  /* Guardian news item details */
+  .guardian-news-item p {
+    margin-bottom: 5px;
+    color: #666666;
+  }
+  
+  /* Guardian news item URL */
+  .guardian-news-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .guardian-news-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .article {
+      flex: 1 1 100%; /* Take full width on smaller screens */
+      max-width: none;
+    }
+  }
+  

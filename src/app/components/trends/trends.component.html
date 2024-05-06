@@ -1,1 +1,23 @@
-<p>trends works!</p>
+<div class="article-container">
+    <!-- <div *ngFor="let article of articles" class="article">
+      <h3>{{ article.title }}</h3>
+      <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
+      <p>{{ article.description }}</p>
+      <p><strong>Published At:</strong> {{ article.publishedAt | date }}</p>
+      <p>{{ article.content }}</p>
+      <a class="read-more" href="{{ article.url }}" target="_blank">Read more</a>
+    </div>
+  </div> -->
+  
+  <div *ngIf="(guardian$ | async) as guardianNews" class="guardian-container">
+    <h2 class="guardian-heading">Guardian News</h2>
+    <div *ngFor="let newsItem of guardianNews" class="guardian-news-item">
+      <h3>{{ newsItem.webTitle }}</h3>
+      <p><strong>Section:</strong> {{ newsItem.sectionName }}</p>
+      <p><strong>Type:</strong> {{ newsItem.type }}</p>
+      <p><strong>Publication Date:</strong> {{ newsItem.webPublicationDate | date: 'medium' }}</p>
+      <p><strong>URL:</strong> <a href="{{ newsItem.webUrl }}" target="_blank">{{ newsItem.webUrl }}</a></p>
+      <hr>
+    </div>
+  </div>    
+  
